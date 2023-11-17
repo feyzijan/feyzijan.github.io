@@ -1,12 +1,62 @@
 import BarGraph from "./BarGraph";
 import DownloadIcon from "@mui/icons-material/Download";
+import StarRating from './StarRating'; // Import the StarRating component
+
+
+
+const skills = {
+  "Programming Languages": ['Skill 1', 'Skill 2'], // Add your skills here
+  "Data Science": ['Skill 1', 'Skill 2'],
+  "Machine Learning": ['Skill 1', 'Skill 2'],
+  "Computational Methods": ['Skill 1', 'Skill 2'],
+  "Other": ['Skill 1', 'Skill 2']
+};
+
+const education = [
+  {
+    degree: "Bachelor's Degree",
+    field: "Computer Science",
+    institution: "University Name",
+    Result:"Result",
+    period: "2016 - 2020"
+  },
+  {
+    degree: "Bachelor's Degree 2",
+    field: "Computer Sciencec",
+    institution: "University Name",
+    Result:"Result",
+    period: "2016 - 2020"
+  },
+  // ... more education entries
+];
+
+
 
 export default function Resume() {
   return (
     <div id="resume" className="min-h-screen flex-col text-center">
+
       <div className="text-5xl font-bold py-8" data-aos={"slide-down"}>
         Resume
       </div>
+                    {/* Start of the Education section */}
+                    <div className="education-section my-12">
+        <div className="text-3xl font-bold">Education</div>
+        <div className="flex overflow-x-auto py-4">
+          {education.map((edu, index) => (
+            <div key={index} className="flex-none mr-8">
+              <h3 className="text-lg font-semibold">{edu.degree} in {edu.field}</h3>
+              <p>{edu.institution}</p>
+              <p>{edu.Result}</p>
+              <time className="text-sm">{edu.period}</time>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* End of the Education section */}
+      
+        
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7">
         <ol class="relative border-l  border-gray-700 ml-9 mb-6">
           <li class="mb-10" data-aos="zoom-in">
@@ -34,7 +84,8 @@ export default function Resume() {
             <p class="mb-4 text-base font-normal  text-gray-400">
               What I did
             </p>
-            <a
+            
+            {/* <a
               href="https://google.com"
               target="_blank"
               rel="noreferrer"
@@ -53,7 +104,7 @@ export default function Resume() {
                 ></path>
               </svg>{" "}
               Download Certificate
-            </a>
+            </a> */}
           </li>
           <li class="mb-10" data-aos="zoom-out" data-aos-delay="700">
             <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
@@ -80,7 +131,7 @@ export default function Resume() {
             <p class="text-base font-normal text-gray-400">
               Description
             </p>
-            <a
+            {/* <a
               href="https://google.com"
               target="_blank"
               rel="noreferrer"
@@ -99,7 +150,7 @@ export default function Resume() {
                 ></path>
               </svg>{" "}
               Download Certificate
-            </a>
+            </a> */}
           </li>
           <li data-aos="zoom-in" data-aos-offset={"-15"} data-aos-delay="1300">
             <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
@@ -126,7 +177,7 @@ export default function Resume() {
             <p class="text-base font-normal text-gray-400">
               Description
             </p>
-            <a
+            {/* <a
               target="_blank"
               rel="noreferrer"
               href="https://google.com"
@@ -145,21 +196,48 @@ export default function Resume() {
                 ></path>
               </svg>{" "}
               Download Certificate
-            </a>
+            </a> */}
           </li>
         </ol>
 
         <div className="flex flex-col text-center" data-aos="slide-up">
-          <div className="text-3xl font-bold py-3">My Skills</div>
+                   
+          {/* <div className="text-3xl font-bold py-3">My Skills</div>
           <div className="ml-16 flex flex-col gap-8 mt-6">
-            <BarGraph name={"S1"} percent={50} />
-            <BarGraph name={"S2"} percent={50} />
-            <BarGraph name={"S3"} percent={50} />
-            <BarGraph name={"S4"} percent={50} />
-            <BarGraph name={"S5"} percent={50} />
-            <BarGraph name={"S6"} percent={50} />
-            <BarGraph name={"S7"} percent={50} />
+          <BarGraph name={"S1"} percent={50} />
+            <div><StarRating rating={2} /> Skill 1</div> 
+            
+            <div className="flex justify-between items-center">
+              <span>Skill 3</span> <StarRating rating={1} />
+            </div>
+            <div className="flex items-center">
+              
+            <span style={{ marginRight: '10px' }}>Skill 1</span>
+            <StarRating rating={2} /> 
+          </div> 
+          </div> */}
+          
+          
+          
+          <div className="text-3xl font-bold py-3">My Skills</div>
+          <div className="grid grid-cols-2 gap-4 mt-6 px-4">
+            {Object.entries(skills).map(([category, skills], index) => (
+              <div key={index}>
+                <div className="font-bold text-xl mb-2">{category}</div>
+                <div className="grid grid-cols-1 gap-2">
+                  {skills.map((skill, skillIndex) => (
+                    <div key={skillIndex} className="flex items-center">
+                      <span style={{ marginRight: '10px' }}>{skill}</span>
+                      <StarRating rating={2} /> {/* Set the rating as needed */}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
+
+
+
 
           <a
             href={require("../../assets/files/FeyziCanEserCV.pdf")}
@@ -169,7 +247,10 @@ export default function Resume() {
             Download CV <DownloadIcon />
           </a>
         </div>
+
       </div>
+      
+      
     </div>
   );
 }

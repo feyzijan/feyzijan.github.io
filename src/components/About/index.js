@@ -3,6 +3,29 @@ import DownloadIcon from "@mui/icons-material/Download";
 // import LearningCode from "../../assets/images/learn-coding-clipart.svg";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
 
+const roles = [
+  {
+    title: "Role 1",
+    period: "Start - End Date",
+    description: "What I did in Role 1",
+    // You can add more fields as needed
+  },
+  {
+    title: "Role 2",
+    period: "Start - End Date",
+    description: "What I did in Role 1",
+    // You can add more fields as needed
+  },
+  {
+    title: "Role 3",
+    period: "Start - End Date",
+    description: "What I did in Role 1",
+    // You can add more fields as needed
+  },
+  // ... more roles
+];
+
+
 export default function About() {
   const getDate = () => {
     var dob = new Date("01/21/2003");
@@ -44,6 +67,20 @@ export default function About() {
           >
             What am i looking for?
           </p>
+
+
+          <p
+            className="text-justify leading-7 text-slate-900"
+            data-aos={"fade-right"}
+          >
+            What is this website?
+          </p>
+
+
+
+
+
+
         </div>
 
         <div
