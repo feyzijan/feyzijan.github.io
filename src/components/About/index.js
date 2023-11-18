@@ -52,20 +52,20 @@ export default function About() {
             className="text-xl lg:text-3xl font-medium"
             data-aos={"fade-left"}
           >
-            Hello there! Welcome to my budding website.  I'm <span className="text-yellow-600">Feyzi,</span> 
-            a Data Science Master's student, and an overall curious individual. 
+            Hello there! Welcome to my budding website.  I'm <span className="text-yellow-600">Feyzi, </span> 
+             a Data Science Master's student, and an overall curious individual. 
           </h3>
           <p
             className="pt-5 leading-7 text-slate-900 text-justify"
             data-aos={"fade-left"}
           >
-            I've created this website quite recently (Nov 2023) to house some of the cool work I did at uni and in my free time.  My professional interests encompass a wide range of topics, including finance, economics, data science, and machine learning. 
+            My professional and academic interests encompass a wide range of topics, including finance, economics, data science, and machine learning. 
           </p>
           <p
             className="text-justify leading-7 text-slate-900"
             data-aos={"fade-right"}
           >
-            I've been building this website to showcase some of my interesting projects and to learn more about web development.
+             I've created this website quite recently (Nov 2023) to house some of the cool work I did at uni and in my free time.  I'm developing it showcase some of my interesting projects and to learn more about web development.
           </p>
 
 
@@ -75,8 +75,8 @@ export default function About() {
           >
             You can find my resume in the next section - or download it by clicking the button on the right.
             In the Projects section there are short descriptions and links to the github repositories of some of my projects - sorted in descending order in terms of importance of sorts.
-            Not every repo is as well documented as I would like, but I'm working on it. 
-          </p>
+            Not all of my key work is there ( especially those done in the last few months), and not every repo is as well documented as I would like, or necessarily up to date ... That's a lot of disclaimers I know, but I'm working on it! 
+          </p> 
 
 
 

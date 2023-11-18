@@ -63,7 +63,7 @@ const skills = {
     {name: 'General Data Structures & Algorithms', rating: 2}
     // Add other computational methods with ratings
   ],
-  "Misc Technical Skills": [
+  "Mechanical Engineering Tools": [
     { name: 'Solidworks/Fusion 3D CAD', rating: 3 },
     { name: 'Arduino/Microcontrollers', rating: 3 },
     { name: 'Simulink Control', rating: 3}
@@ -120,7 +120,7 @@ const roles = [
     description: "Gained proficiency in quantitative risk management of linear and nonlinear trading books in Equity and Currency risk desks. Streamlined a 30-minute manual process by automating risk breach monitoring with a Python script that analyzed intraday risk data upon email alerts, outputting problematic trades to Excel, and visualizing risk changes."
   },
   {
-    title: "Outreach Ambassador & Teaching Assistant - Part Time",
+    title: "Outreach Ambassador & Teaching Assistant",
     company: "Imperial College London",
     period: "Sep 2021 - Jun 2023",
     description: "Delivered STEM outreach programs for kids, including tutoring, engineering design workshops, and science experiments. Led office hours for freshmen and sophomores in Maths, Computing, and Mechatronics."
@@ -186,6 +186,9 @@ export default function Resume() {
 
       <div className="skills-section my-12">
         <div className="text-3xl font-bold">Skills</div>
+        <p className="text-lg font-semibold">
+          I used stars to denote my proficiency as follows : 3 start : well experienced, 2 stars : intermediate, 1 star : beginner, though with at least some applied experience.
+          </p>
         <div className="grid grid-cols-2 gap-4 mt-6 px-4">
           {Object.entries(skills).map(([category, skills], index) => (
             <div key={index}>

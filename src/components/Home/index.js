@@ -25,7 +25,7 @@ export default function Home() {
           options={{
             strings: [
               "✋I'm Feyzi Can Eser",
-              "I'm an enthusiast Data Scientist?",
+              "I'm a Data Science enthusiast",
               "I'm a Data Analytics 👨‍🎓 Master's Student",
               "You can 📲 me via email ✉️",
             ],
