@@ -14,9 +14,6 @@ export default function Contact() {
       <div className="flex items-center justify-center flex-col md:flex-row ">
         <div className="flex-auto md:w-80 flex flex-col justify-center text-center items-center gap-1">
           <div data-aos={"slide-up"} className="text-center mt-10">
-            <div className="text-center mt-2 text-3xl xs:text-xl md:text-2xl font-bold">
-              Follow Me
-            </div>
             <div className="text-white flex flex-row gap-7 w-fit mx-auto pt-4">
               {/* Social Icons */}
               {/* Add your social icons here as below */}
@@ -25,9 +22,7 @@ export default function Contact() {
               <span className="pl-1">Contact me at: <a href="mailto:feyzican4@gmail.com"><EmailIcon /> feyzican4@gmail.com</a></span>
             </div>
             <div className="mt-6 italic text-sm font-medium text-blue-500">
-              <span className="pl-1">Copyright</span>
-              <CopyrightIcon className="cursor-pointer mx-1" />
-              <span>2023</span>
+             
             </div>
           </div>
         </div>

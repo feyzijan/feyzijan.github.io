@@ -68,7 +68,9 @@ export default function Slidebar() {
           data-aos="slide-right"
           data-aos-delay="1800"
         >
-          <a href="#contact">Contact</a>
+          {/* Keep the "Contact" text but remove it from the link */}
+          <a>Contact: </a>
+          <a href="mailto:feyzican4@gmail.com">feyzican4@gmail.com</a>
         </p>
       </div>
       <div

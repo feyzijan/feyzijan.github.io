@@ -1,256 +1,209 @@
-import BarGraph from "./BarGraph";
 import DownloadIcon from "@mui/icons-material/Download";
 import StarRating from './StarRating'; // Import the StarRating component
 
-
-
 const skills = {
-  "Programming Languages": ['Skill 1', 'Skill 2'], // Add your skills here
-  "Data Science": ['Skill 1', 'Skill 2'],
-  "Machine Learning": ['Skill 1', 'Skill 2'],
-  "Computational Methods": ['Skill 1', 'Skill 2'],
-  "Other": ['Skill 1', 'Skill 2']
+  "Programming Languages": [
+    { name: 'Python', rating: 3 },
+    { name: 'C', rating: 2 },
+    { name: 'C++', rating: 2 },
+    { name: 'Matlab', rating: 2 },
+    { name: 'R', rating: 1 },
+    // Add other programming languages with ratings
+  ],
+  "Data Analytics": [
+    { name: 'Pandas', rating: 3 },
+    { name: 'SQL', rating: 2 },
+    { name: 'PySpark', rating: 2 },
+    { name: 'Excel', rating: 3 },
+    // Add other data analytics tools with ratings
+  ],
+  "ML Toolkits": [
+    { name: 'Sklearn', rating: 3 },
+    { name: 'Tensorflow/Keras', rating: 3 },
+    { name: 'PyTorch', rating: 3 },
+    // Add other ML toolkits with ratings
+  ],
+
+  "Data Visualization": [
+    { name: 'Matplotlib/Plotly/Seaborn', rating: 3 },
+    { name: 'D3.js', rating: 2 },
+    { name: 'Tableau', rating: 3 },
+    // Add other data visualization tools with ratings
+  ],
+
+  "ML Techniques": [
+    { name: 'Feature Engineering', rating: 3 },
+    { name: 'Hyperparameter Tuning', rating: 3 },
+
+    // Add other ML techniques with ratings
+  ],
+  "Big Data & Distributed Systems": [
+    { name: 'MapReduce and Hadoop', rating: 1 },
+    { name: 'Pig', rating: 1 },
+    { name: 'AWS', rating: 1 },
+    // Add other big data and distributed systems with ratings
+  ],
+
+  "Modelling": [
+    { name: 'Regression', rating: 4 },
+    { name: 'Clustering Algorithms', rating: 4 },
+    { name: 'Support Vector Machines', rating: 4 },
+    { name: 'Decision Trees', rating: 4 },
+    { name: 'Bayesian Networks', rating: 4 },
+    { name: 'Hidden Markov Models', rating: 4 },
+    // Add other ML libraries and models with ratings
+  ],
+
+  "Computational Methods": [
+    { name: 'Numerical Methods', rating: 3 },
+    { name: 'Convex Optimization', rating: 3 },
+    { name: 'Graph Search', rating: 2 },
+    { name: 'Game Playing Algorithms', rating: 2 },
+    {name: 'Monte Carlo Methods', rating: 2},
+    {name: 'General Data Structures & Algorithms', rating: 2}
+    // Add other computational methods with ratings
+  ],
+  "Misc Technical Skills": [
+    { name: 'Solidworks/Fusion 3D CAD', rating: 3 },
+    { name: 'Arduino/Microcontrollers', rating: 3 },
+    { name: 'Simulink Control', rating: 3}
+  ],
+
+
+  "Languages": [
+    { name: 'Turkish', rating: 3 },
+    { name: 'English', rating: 3 },
+    { name: 'German', rating: 3 },
+    { name: 'Mandarin - still learning!', rating: 1 },
+    // Add other languages with ratings
+  ]
 };
+
 
 const education = [
   {
-    degree: "Bachelor's Degree",
-    field: "Computer Science",
-    institution: "University Name",
-    Result:"Result",
-    period: "2016 - 2020"
+    degree: "MS",
+    field: "Computational Data Analytics",
+    institution: "Georgia Institute of Technology",
+    result: "In Progress",
+    period: "2023 - Exp. Dec 2024"
   },
   {
-    degree: "Bachelor's Degree 2",
-    field: "Computer Sciencec",
-    institution: "University Name",
-    Result:"Result",
-    period: "2016 - 2020"
-  },
-  // ... more education entries
+    degree: "MEng & BEng",
+    field: "Mechanical Engineering",
+    institution: "Imperial College London",
+    result: "First Class Honours",
+    period: "2019 - 2023"
+  }
 ];
 
+const roles = [
+
+    {
+      title: "Graduate Researcher ",
+      company: "Georgia Tech Human Computer Interaction Lab",
+      period: "Nov 2023 - present",
+      description: "Conducting a research project on using electrodermal activity data from wearable sensors to predict IT worker productivity and recommend optimal break times - currently in the experiment design phase."
+    },
+  
+
+  {
+    title: "Corporate Equity Derivatives Intern",
+    company: "JP Morgan",
+    period: "Jun 2023 - Aug 2023",
+    description: "Built expertise in pricing and hedging of various option products, worked on live deals, and competed in trading simulations. Investigated patterns in the volatility premium of convertible bonds, backtesting various instruments in Python to reveal an unexpected drops in the final six months before maturity, advising clients with sizable holdings on pre-extension strategies."
+  },
+  {
+    title: "Market Risk Intern",
+    company: "JP Morgan",
+    period: "Jun 2022 - Aug 2022",
+    description: "Gained proficiency in quantitative risk management of linear and nonlinear trading books in Equity and Currency risk desks. Streamlined a 30-minute manual process by automating risk breach monitoring with a Python script that analyzed intraday risk data upon email alerts, outputting problematic trades to Excel, and visualizing risk changes."
+  },
+  {
+    title: "Outreach Ambassador & Teaching Assistant - Part Time",
+    company: "Imperial College London",
+    period: "Sep 2021 - Jun 2023",
+    description: "Delivered STEM outreach programs for kids, including tutoring, engineering design workshops, and science experiments. Led office hours for freshmen and sophomores in Maths, Computing, and Mechatronics."
+  }
+  // Add other roles as needed
+];
 
 
 export default function Resume() {
   return (
-    <div id="resume" className="min-h-screen flex-col text-center">
-
+    <div id="resume" className="min-h-screen flex flex-col text-center">
       <div className="text-5xl font-bold py-8" data-aos={"slide-down"}>
         Resume
       </div>
-                    {/* Start of the Education section */}
-                    <div className="education-section my-12">
+      <a
+        href={require("../../assets/files/FeyziCanEserCV.pdf")}
+        download={"FeyziCanEserCV"}
+        className="inline-flex items-center px-6 py-2 mt-12 mx-auto w-fit text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
+      >
+        Download CV <DownloadIcon />
+      </a>
+
+
+      <div className="education-section my-12">
         <div className="text-3xl font-bold">Education</div>
-        <div className="flex overflow-x-auto py-4">
+        <div className="grid grid-cols-2 gap-4">
           {education.map((edu, index) => (
             <div key={index} className="flex-none mr-8">
               <h3 className="text-lg font-semibold">{edu.degree} in {edu.field}</h3>
               <p>{edu.institution}</p>
-              <p>{edu.Result}</p>
+              <p>{edu.result}</p>
               <time className="text-sm">{edu.period}</time>
             </div>
           ))}
         </div>
       </div>
-      {/* End of the Education section */}
       
-        
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7">
-        <ol class="relative border-l  border-gray-700 ml-9 mb-6">
-          <li class="mb-10" data-aos="zoom-in">
-            <span class="absolute flex items-center justify-center w-6 h-6   rounded-full -left-3 ring-8  ring-gray-900 bg-blue-900">
-              <svg
-                aria-hidden="true"
-                class="w-3 h-3  text-blue-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </span>
-            <h3 class="flex items-center mb-1 text-lg font-semibold  text-white ml-28">
-              Role
-            </h3>
-            <time class="block pt-1 pb-3  text-sm font-normal leading-none  text-gray-500">
-              Start - End Date
-            </time>
-            <p class="mb-4 text-base font-normal  text-gray-400">
-              What I did
-            </p>
-            
-            {/* <a
-              href="https://google.com"
-              target="_blank"
-              rel="noreferrer"
-              class="inline-flex items-center px-4 py-2 mt-2 text-sm font-medium border rounded-lg  focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
-            >
-              <svg
-                class="w-4 h-4 mr-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>{" "}
-              Download Certificate
-            </a> */}
-          </li>
-          <li class="mb-10" data-aos="zoom-out" data-aos-delay="700">
-            <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
-              <svg
-                aria-hidden="true"
-                class="w-3 h-3 text-blue-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </span>
-            <h3 class="mb-1 text-lg font-semibold text-white">
-              What I did
-            </h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">
-              Dates
-            </time>
-            <p class="text-base font-normal text-gray-400">
-              Description
-            </p>
-            {/* <a
-              href="https://google.com"
-              target="_blank"
-              rel="noreferrer"
-              class="inline-flex items-center px-4 py-2 mt-5 text-sm font-medium border rounded-lg  focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
-            >
-              <svg
-                class="w-4 h-4 mr-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>{" "}
-              Download Certificate
-            </a> */}
-          </li>
-          <li data-aos="zoom-in" data-aos-offset={"-15"} data-aos-delay="1300">
-            <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
-              <svg
-                aria-hidden="true"
-                class="w-3 h-3 text-blue-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </span>
-            <h3 class="mb-1 text-lg font-semibold text-white">
-              What I did
-            </h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">
-              Date
-            </time>
-            <p class="text-base font-normal text-gray-400">
-              Description
-            </p>
-            {/* <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://google.com"
-              class="inline-flex items-center px-4 py-2 mt-5 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
-            >
-              <svg
-                class="w-4 h-4 mr-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>{" "}
-              Download Certificate
-            </a> */}
-          </li>
-        </ol>
-
-        <div className="flex flex-col text-center" data-aos="slide-up">
-                   
-          {/* <div className="text-3xl font-bold py-3">My Skills</div>
-          <div className="ml-16 flex flex-col gap-8 mt-6">
-          <BarGraph name={"S1"} percent={50} />
-            <div><StarRating rating={2} /> Skill 1</div> 
-            
-            <div className="flex justify-between items-center">
-              <span>Skill 3</span> <StarRating rating={1} />
-            </div>
-            <div className="flex items-center">
-              
-            <span style={{ marginRight: '10px' }}>Skill 1</span>
-            <StarRating rating={2} /> 
-          </div> 
-          </div> */}
-          
-          
-          
-          <div className="text-3xl font-bold py-3">My Skills</div>
-          <div className="grid grid-cols-2 gap-4 mt-6 px-4">
-            {Object.entries(skills).map(([category, skills], index) => (
-              <div key={index}>
-                <div className="font-bold text-xl mb-2">{category}</div>
-                <div className="grid grid-cols-1 gap-2">
-                  {skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="flex items-center">
-                      <span style={{ marginRight: '10px' }}>{skill}</span>
-                      <StarRating rating={2} /> {/* Set the rating as needed */}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-
-
-
-          <a
-            href={require("../../assets/files/FeyziCanEserCV.pdf")}
-            download={"FeyziCanEserCV"}
-            class="inline-flex items-center px-6 py-2 mt-12 mx-auto w-fit text-sm font-medium border rounded-lg  focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
-          >
-            Download CV <DownloadIcon />
-          </a>
+      <div className="roles-section my-12">
+  <div className="text-3xl font-bold mb-4">Experience</div> {/* Add margin-bottom here */}
+  <ol className="relative border-l border-gray-700 ml-9 mb-6">
+    {roles.map((role, index) => (
+      <li key={index} className="mb-10" data-aos="zoom-in">
+        <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
+          {/* SVG icon */}
+        </span>
+        <div className="flex flex-col items-center"> {/* Center content */}
+          <h3 className="mb-1 text-lg font-semibold text-white">
+            {role.company} - {role.title}
+          </h3>
+          <time className="block pt-1 pb-3 text-sm font-normal leading-none text-gray-500">
+            {role.period}
+          </time>
+          <p className="mb-4 text-base font-normal text-gray-400">
+            {role.description}
+          </p>
         </div>
+      </li>
+    ))}
+  </ol>
+</div>
 
+
+
+      <div className="skills-section my-12">
+        <div className="text-3xl font-bold">Skills</div>
+        <div className="grid grid-cols-2 gap-4 mt-6 px-4">
+          {Object.entries(skills).map(([category, skills], index) => (
+            <div key={index}>
+              <div className="font-bold text-xl mb-2">{category}</div>
+              <div className="grid grid-cols-1 gap-2">
+                {skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="flex items-center">
+                    <span style={{ marginRight: '10px' }}>{skill.name}</span>
+                    <StarRating rating={skill.rating} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      
-      
+
+     
     </div>
   );
 }

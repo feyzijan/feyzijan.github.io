@@ -27,7 +27,7 @@ export default function Home() {
               "✋I'm Feyzi Can Eser",
               "I'm an enthusiast Data Scientist?",
               "I'm a Data Analytics 👨‍🎓 Master's Student",
-              "You can 📲 me through discord or ✉️",
+              "You can 📲 me via email ✉️",
             ],
             delay: 150,
             pauseFor: 1500,
