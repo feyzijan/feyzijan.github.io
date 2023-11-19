@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f87d891b.css",
-    "main.js": "/static/js/main.9a09bc1e.js",
+    "main.js": "/static/js/main.41bb74ef.js",
     "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
     "static/media/img_ConvexOptimization.png": "/static/media/img_ConvexOptimization.0298fa09e7431cc1efb0.png",
     "static/media/MyImage.webp": "/static/media/MyImage.69d71586c084d4362776.webp",
@@ -35,11 +35,11 @@
     "static/media/img_MatlabSimulink.jpg": "/static/media/img_MatlabSimulink.61bd61c47da7ac424f7b.jpg",
     "index.html": "/index.html",
     "main.f87d891b.css.map": "/static/css/main.f87d891b.css.map",
-    "main.9a09bc1e.js.map": "/static/js/main.9a09bc1e.js.map",
+    "main.41bb74ef.js.map": "/static/js/main.41bb74ef.js.map",
     "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f87d891b.css",
-    "static/js/main.9a09bc1e.js"
+    "static/js/main.41bb74ef.js"
   ]
 }
