@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function Slidebar() {
   const [select, setSelect] = useState(0);
+
   return (
     <div className="flex-none hidden lg:block  bg-black h-screen min-w-[25%] fixed ">
       <div className="nav flex  text-white text-lg mt-10 flex-col align-middle justify-center text-center w-full gap-5 overflow-hidden">
@@ -61,16 +62,23 @@ export default function Slidebar() {
           <a href="#projects">Projects</a>
         </p>
         <p
-          onClick={() => setSelect(4)}
+          onClick={() => {
+            setSelect(4);
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+              window.scrollTo({
+                top: contactSection.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          }}
           className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
             select === 4 ? "text-blue-600 " : ""
           }`}
           data-aos="slide-right"
           data-aos-delay="1800"
         >
-          {/* Keep the "Contact" text but remove it from the link */}
-          <a>Contact: </a>
-          <a href="mailto:feyzican4@gmail.com">feyzican4@gmail.com</a>
+          Contact
         </p>
       </div>
       <div

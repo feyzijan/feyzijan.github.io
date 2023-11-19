@@ -19,8 +19,12 @@ export default function Contact() {
               {/* Add your social icons here as below */}
             </div>
             <div className="mt-6 italic text-sm font-medium text-blue-500">
-              <span className="pl-1">Contact me at: <a href="mailto:feyzican4@gmail.com"><EmailIcon /> feyzican4@gmail.com</a></span>
+              <span className="pl-1">Contact me at <a href="mailto:feyzican4@gmail.com"><EmailIcon /> feyzican4@gmail.com</a> </span>
             </div>
+            <div className="mt-6 italic text-sm font-medium text-blue-500">
+              <span className="pl-1">or at <a href="mailto:feser3@gatech.edu"><EmailIcon /> feser3@gatech.edu</a> </span>
+            </div>
+
             <div className="mt-6 italic text-sm font-medium text-blue-500">
              
             </div>
