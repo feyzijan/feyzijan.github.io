@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.f87d891b.css",
-    "main.js": "/static/js/main.b496b4b4.js",
+    "main.css": "/static/css/main.e7f69b10.css",
+    "main.js": "/static/js/main.b36684a1.js",
     "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
     "static/media/img_ConvexOptimization.png": "/static/media/img_ConvexOptimization.0298fa09e7431cc1efb0.png",
     "static/media/MyImage.webp": "/static/media/MyImage.69d71586c084d4362776.webp",
     "static/media/img_Ros.png": "/static/media/img_Ros.4a2191d3f5ab9b5e8f1b.png",
     "static/media/RobotoSlab-Black.ttf": "/static/media/RobotoSlab-Black.b1eefbae7b352cda1c3a.ttf",
+    "static/media/FeyziCanEserCV.pdf": "/static/media/FeyziCanEserCV.9a5fecebef74215e676f.pdf",
     "static/media/RobotoSlab-Bold.ttf": "/static/media/RobotoSlab-Bold.aea772dee2141c9b0792.ttf",
     "static/media/RobotoSlab-Regular.ttf": "/static/media/RobotoSlab-Regular.7ff9da9c484d15185b5b.ttf",
-    "static/media/FeyziCanEserCV.pdf": "/static/media/FeyziCanEserCV.ad18c464bf92e10d922a.pdf",
     "static/media/ShellDatathon.png": "/static/media/ShellDatathon.815b2d4f215e9bfa3144.png",
     "static/media/img_EWB.jpg": "/static/media/img_EWB.4dca3377f311bb5b4637.jpg",
     "static/media/img_CAlgos.png": "/static/media/img_CAlgos.8902c65dc4eadb45dcc5.png",
@@ -34,12 +34,12 @@
     "static/media/img_LEOHack2022.jpg": "/static/media/img_LEOHack2022.c5694920fb6d251e64f5.jpg",
     "static/media/img_MatlabSimulink.jpg": "/static/media/img_MatlabSimulink.61bd61c47da7ac424f7b.jpg",
     "index.html": "/index.html",
-    "main.f87d891b.css.map": "/static/css/main.f87d891b.css.map",
-    "main.b496b4b4.js.map": "/static/js/main.b496b4b4.js.map",
+    "main.e7f69b10.css.map": "/static/css/main.e7f69b10.css.map",
+    "main.b36684a1.js.map": "/static/js/main.b36684a1.js.map",
     "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f87d891b.css",
-    "static/js/main.b496b4b4.js"
+    "static/css/main.e7f69b10.css",
+    "static/js/main.b36684a1.js"
   ]
 }
