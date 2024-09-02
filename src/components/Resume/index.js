@@ -39,7 +39,6 @@ const skills = {
   ],
   "Big Data & Distributed Systems": [
     { name: 'MapReduce and Hadoop', rating: 1 },
-    { name: 'Pig', rating: 1 },
     { name: 'AWS', rating: 1 },
     // Add other big data and distributed systems with ratings
   ],
@@ -85,8 +84,8 @@ const education = [
     degree: "MS",
     field: "Computational Data Analytics",
     institution: "Georgia Institute of Technology",
-    result: "In Progress",
-    period: "2023 - Exp. Dec 2024"
+    result: "In Progress - 4.0",
+    period: "2023 - Dec 2024"
   },
   {
     degree: "MEng & BEng",
@@ -100,24 +99,45 @@ const education = [
 const roles = [
 
     {
+      title: "Data Engineering Intern, Vehicle Infotainment",
+      company: "Tesla",
+      period: "May 2024 - Aug 2024",
+      description: `- Reduced Spark job failures and costs usage by optimizing resource allocation based on past job logs.
+      - Created new daily Spark jobs with PySpark to parse out relevant performance metrics for audio and connectivity systems from raw vehicle datasets and visualized these in interactive Splunk dashboards built with SPL queries.
+      - Developed a flexible firmware check architecture in Python to analyze car component performances across firmware versions, publishing daily metrics to various internal APIs for use in signing off on expanding firmware rollouts.`
+    },
+
+
+    {
       title: "Graduate Researcher ",
       company: "Georgia Tech Human Computer Interaction Lab",
-      period: "Nov 2023 - present",
-      description: "Conducting a research project on using electrodermal activity data from wearable sensors to predict IT worker productivity and recommend optimal break times - currently in the experiment design phase."
+      period: "Jan 2024 - present",
+      description: "Conducting a research project on using electrodermal activity data from wearable sensors to predict IT worker productivity and recommend optimal break times, currently conducting background research and designing human trials"
+    },
+
+
+    {
+      title: "Graduate Teaching Assistant",
+      company: "Georgia Tech, Data and Visual Analytics Course",
+      period: "Jan 2024 - present",
+      description: "Resolving programming questions, grading coursework, and conducting assignment walkthroughs for several hundred students"
     },
   
-
   {
     title: "Corporate Equity Derivatives Intern",
     company: "JP Morgan",
     period: "Jun 2023 - Aug 2023",
-    description: "Built expertise in pricing and hedging of various option products, worked on live deals, and competed in trading simulations. Investigated patterns in the volatility premium of convertible bonds, backtesting various instruments in Python to reveal an unexpected drops in the final six months before maturity, advising clients with sizable holdings on pre-extension strategies."
+    description: `- Built expertise in pricing and hedging of various option products, worked on live deals, and competed in trading simulations.
+    - Investigated patterns in the volatility premium of convertible bonds, backtesting various instruments in Python to reveal an unexpected 40% drop in the final six months before maturity, and advised clients on pre-extension strategies
+    - Analyzed competitors' enhanced share buyback strategies using webscraping and Pandas, visualized the inferred execution patterns, and identified improvements for a $50m+ yearly revenue product`
   },
   {
     title: "Market Risk Intern",
     company: "JP Morgan",
     period: "Jun 2022 - Aug 2022",
-    description: "Gained proficiency in quantitative risk management of linear and nonlinear trading books in Equity and Currency risk desks. Streamlined a 30-minute manual process by automating risk breach monitoring with a Python script that analyzed intraday risk data upon email alerts, outputting problematic trades to Excel, and visualizing risk changes."
+    description: `- Gained proficiency in quantitative risk management of linear and nonlinear trading books in Equity and Currency risk desks. 
+    - Visualized risks from exotic FX options in interactive Tableau dashboards that auto-updated  with scheduled SQL queries
+    - Automated risk breach monitoring with a Python script that analyzed intraday risk data upon email alerts, outputting problematic trades to Excel and visualizing key changes in risk metrics, streamlining a time consuming manual process`
   },
   {
     title: "Outreach Ambassador & Teaching Assistant",
@@ -159,23 +179,23 @@ export default function Resume() {
       </div>
       
       <div className="roles-section my-12">
-  <div className="text-3xl font-bold mb-4">Experience</div> {/* Add margin-bottom here */}
+  <div className="text-3xl font-bold mb-4">Experience</div> 
   <ol className="relative border-l border-gray-700 ml-9 mb-6">
     {roles.map((role, index) => (
       <li key={index} className="mb-10" data-aos="zoom-in">
         <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
           {/* SVG icon */}
         </span>
-        <div className="flex flex-col items-center"> {/* Center content */}
+        <div className="flex flex-col items-center">
           <h3 className="mb-1 text-lg font-semibold text-white">
             {role.company} - {role.title}
           </h3>
           <time className="block pt-1 pb-3 text-sm font-normal leading-none text-gray-500">
             {role.period}
           </time>
-          <p className="mb-4 text-base font-normal text-gray-400">
+          <pre className="mb-4 text-base font-normal text-gray-400 whitespace-pre-line"> {/* Modified line */}
             {role.description}
-          </p>
+          </pre> 
         </div>
       </li>
     ))}
