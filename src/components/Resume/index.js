@@ -1,5 +1,5 @@
 import DownloadIcon from "@mui/icons-material/Download";
-import StarRating from './StarRating'; // Import the StarRating component
+import StarRating from './StarRating'; 
 
 const skills = {
   "Programming Languages": [
@@ -8,49 +8,25 @@ const skills = {
     { name: 'C++', rating: 2 },
     { name: 'Matlab', rating: 2 },
     { name: 'R', rating: 1 },
-    // Add other programming languages with ratings
   ],
+
   "Data Analytics": [
     { name: 'Pandas', rating: 3 },
-    { name: 'SQL', rating: 2 },
+    { name: 'SQL', rating: 3 },
     { name: 'PySpark', rating: 2 },
     { name: 'Excel', rating: 3 },
-    // Add other data analytics tools with ratings
+    { name: 'Splunk', rating: 3 },
   ],
   "ML Toolkits": [
     { name: 'Sklearn', rating: 3 },
     { name: 'Tensorflow/Keras', rating: 3 },
     { name: 'PyTorch', rating: 3 },
-    // Add other ML toolkits with ratings
   ],
 
   "Data Visualization": [
     { name: 'Matplotlib/Plotly/Seaborn', rating: 3 },
     { name: 'D3.js', rating: 2 },
     { name: 'Tableau', rating: 3 },
-    // Add other data visualization tools with ratings
-  ],
-
-  "ML Techniques": [
-    { name: 'Feature Engineering', rating: 3 },
-    { name: 'Hyperparameter Tuning', rating: 3 },
-
-    // Add other ML techniques with ratings
-  ],
-  "Big Data & Distributed Systems": [
-    { name: 'MapReduce and Hadoop', rating: 1 },
-    { name: 'AWS', rating: 1 },
-    // Add other big data and distributed systems with ratings
-  ],
-
-  "Modelling": [
-    { name: 'Regression', rating: 4 },
-    { name: 'Clustering Algorithms', rating: 4 },
-    { name: 'Support Vector Machines', rating: 4 },
-    { name: 'Decision Trees', rating: 4 },
-    { name: 'Bayesian Networks', rating: 4 },
-    { name: 'Hidden Markov Models', rating: 4 },
-    // Add other ML libraries and models with ratings
   ],
 
   "Computational Methods": [
@@ -59,8 +35,7 @@ const skills = {
     { name: 'Graph Search', rating: 2 },
     { name: 'Game Playing Algorithms', rating: 2 },
     {name: 'Monte Carlo Methods', rating: 2},
-    {name: 'General Data Structures & Algorithms', rating: 2}
-    // Add other computational methods with ratings
+    {name: 'Data Structures & Algorithms', rating: 2}
   ],
   "Mechanical Engineering Tools": [
     { name: 'Solidworks/Fusion 3D CAD', rating: 3 },
@@ -68,13 +43,11 @@ const skills = {
     { name: 'Simulink Control', rating: 3}
   ],
 
-
   "Languages": [
     { name: 'Turkish', rating: 3 },
     { name: 'English', rating: 3 },
     { name: 'German', rating: 3 },
-    { name: 'Mandarin - still learning!', rating: 1 },
-    // Add other languages with ratings
+    { name: 'Mandarin - still learning!', rating: 1.5 },
   ]
 };
 
@@ -85,7 +58,7 @@ const education = [
     field: "Computational Data Analytics",
     institution: "Georgia Institute of Technology",
     result: "In Progress - 4.0",
-    period: "2023 - Dec 2024"
+    period: "Aug 2023 - Dec 2024"
   },
   {
     degree: "MEng & BEng",
@@ -186,7 +159,7 @@ export default function Resume() {
         <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
           {/* SVG icon */}
         </span>
-        <div className="flex flex-col items-center">
+        <div className="fleex flex-col items-center">
           <h3 className="mb-1 text-lg font-semibold text-white">
             {role.company} - {role.title}
           </h3>

@@ -20,6 +20,9 @@ import CAlgosImage from '../assets/images/Projects/img_CAlgos.png';
 import ClassificationOptimization from '../assets/images/Projects/img_ClassificationOptimization.png';
 import ConvexOptimization from '../assets/images/Projects/img_ConvexOptimization.png';
 
+// import RAGLLM from '../assets/images/Projects/img_RAGLLM.png';
+// import Optidule from '../assets/images/Projects/img_Optidule.png';
+
 export const projects = [
   {
     title: "VULCAN: Agent Based Macroeconomics Model",
