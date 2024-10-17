@@ -26,7 +26,7 @@ import ConvexOptimization from '../assets/images/Projects/img_ConvexOptimization
 export const projects = [
   {
     title: "VULCAN: Agent Based Macroeconomics Model",
-    desc: "Agent based macroeconomic model from scratch in C++ to evaluate macroeconomic policies.",
+    desc: "Agent based macroeconomic model from scratch in C++ to evaluate macroeconomic policies",
     tags: [
       {
         name: "C++",
